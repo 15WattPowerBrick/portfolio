@@ -49,7 +49,7 @@ export default function Websites() {
       </div>
 
       <Carousel
-        className="w-full"
+        className="w-full transition-all duration-300 hover:scale-[1.02]"
         opts={{
           loop: true,
         }}
@@ -60,9 +60,10 @@ export default function Websites() {
         <CarouselContent className="-ml-4">
           {websites.map((site, index) => (
             <CarouselItem key={index} className="pl-4 ">
-              <div className="bg-black rounded-xl overflow-hidden shadow-lg">
+              <div className="bg-muted rounded-xl overflow-hidden shadow-lg">
                 {/* Website Image */}
                 <div className="relative">
+                  <h3 className="text-xl font-semibold mb-2">{site.name}</h3>
                   <Image
                     src={site.image}
                     width={400}
@@ -70,11 +71,6 @@ export default function Websites() {
                     alt={site.name}
                     className="object-cover w-full h-96"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <h2 className="text-white text-3xl font-bold">
-                      {site.name}
-                    </h2>
-                  </div>
                 </div>
 
                 {/* Website Details */}
