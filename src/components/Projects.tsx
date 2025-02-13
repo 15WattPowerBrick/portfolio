@@ -1,11 +1,14 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 interface PlanCardProps {
   title: string;
   description: string;
-  metric: string;
-  period: string;
+  techStack: string[];
+  url: string;
   type?: string;
   className?: string;
 }
@@ -13,33 +16,42 @@ interface PlanCardProps {
 function PlanCard({
   title,
   description,
-  metric,
-  period,
+  techStack,
+  url,
   type,
   className,
 }: PlanCardProps) {
   return (
-    <div
-      className={cn(
-        "p-6 rounded-lg relative group cursor-pointer transition-all duration-300 hover:scale-[1.02]",
-        className
-      )}
-    >
-      {type && (
-        <div className="text-sm mb-4 font-medium opacity-80 uppercase tracking-wider">
-          {type}
+    <a target="_blank" href={url} className="h-full">
+      <div
+        className={cn(
+          "p-6 rounded-lg relative group cursor-pointer transition-all duration-300 hover:scale-[1.02] flex flex-col h-full",
+          className
+        )}
+      >
+        {type && (
+          <div className="text-sm mb-4 font-medium opacity-80 uppercase tracking-wider">
+            {type}
+          </div>
+        )}
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-sm opacity-70 mb-4 line-clamp-2 flex-grow">
+          {description}
+        </p>
+
+        <div className="flex flex-wrap gap-2 mb-6">
+          {techStack.map((tech) => (
+            <Badge key={tech} className="text-xs">
+              {tech}
+            </Badge>
+          ))}
         </div>
-      )}
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-sm opacity-70 mb-8 line-clamp-2">{description}</p>
-      <div className="flex items-end justify-between">
-        <div>
-          <div className="text-2xl font-bold">{metric}</div>
-          <div className="text-sm opacity-70">{period}</div>
+
+        <div className="mt-auto">
+          <ArrowRight className="h-5 w-5" />
         </div>
-        <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -55,32 +67,32 @@ function Projects() {
           type="WEB"
           title="Parsely AI"
           description="AI-powered resume parsing tool for recruitment agencies."
-          metric="7.20%"
-          period="3 yrs CAGR"
+          techStack={["Next.js", "ShadCN", "Gemini API"]}
+          url="https://parsely.swanhtataung.com"
           className="bg-emerald-100 hover:bg-emerald-200"
         />
         <PlanCard
           type="WEB"
           title="Horizon Focus CRM"
           description="CRM tool built for SMEs in Singapore."
-          metric="14.20%"
-          period="25 yrs CAGR"
+          techStack={["Next.js", "Auth.js", "PostgreSQL", "Zod"]}
+          url="https://horizonfocus.cloud"
           className="bg-black text-white hover:bg-black/90"
         />
         <PlanCard
           type="MAC OS"
           title="Zenless"
-          description="The small breaks in life goes a long way."
-          metric="11.20%"
-          period="1 yr returns"
+          description="The small breaks in life go a long way."
+          techStack={["Swift"]}
+          url="https://zenless.swanhtataung.com"
           className="bg-purple-100 hover:bg-purple-200"
         />
         <PlanCard
           type="WEB"
           title="Portfolio Template"
           description="This portfolio template is open-source, sharing is caring!"
-          metric="8.20%"
-          period="5 yrs CAGR"
+          techStack={["Next.js", "Tailwind", "ShadCN"]}
+          url="https://github.com/15WattPowerBrick/portfolio"
           className="bg-yellow-100 hover:bg-yellow-200"
         />
       </div>
