@@ -27,7 +27,7 @@ export default function Hero() {
         onClick={onOnce}
       />
 
-      <div className="block absolute -translate-y-48 translate-x-52">
+      <div className="block absolute -translate-y-52 translate-x-52">
         <svg
           className="w-16 h-auto text-orange-500"
           width={121}
