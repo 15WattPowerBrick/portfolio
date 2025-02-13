@@ -35,10 +35,9 @@ function PlanCard({
           </div>
         )}
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-sm opacity-70 mb-4 line-clamp-2 flex-grow">
-          {description}
-        </p>
+        <p className="text-sm opacity-70 mb-4 line-clamp-2">{description}</p>
 
+        {/* Ensures the tech stack stays at the top */}
         <div className="flex flex-wrap gap-2 mb-6">
           {techStack.map((tech) => (
             <Badge key={tech} className="text-xs">
@@ -47,7 +46,8 @@ function PlanCard({
           ))}
         </div>
 
-        <div className="mt-auto">
+        {/* This will push the arrow icon to the bottom */}
+        <div className="mt-auto flex items-center">
           <ArrowRight className="h-5 w-5" />
         </div>
       </div>
@@ -83,7 +83,7 @@ function Projects() {
           type="MAC OS"
           title="Zenless"
           description="The small breaks in life go a long way."
-          techStack={["Swift"]}
+          techStack={["Swift", "XCode"]}
           url="https://zenless.swanhtataung.com"
           className="bg-purple-100 hover:bg-purple-200"
         />
@@ -91,7 +91,7 @@ function Projects() {
           type="WEB"
           title="Portfolio Template"
           description="This portfolio template is open-source, sharing is caring!"
-          techStack={["Next.js", "Tailwind", "ShadCN"]}
+          techStack={["Next.js", "Tailwind", "ShadCN", "Typescript"]}
           url="https://github.com/15WattPowerBrick/portfolio"
           className="bg-yellow-100 hover:bg-yellow-200"
         />
