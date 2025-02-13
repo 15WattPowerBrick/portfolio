@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { TConductorInstance } from "react-canvas-confetti/dist/types";
 import Realistic from "react-canvas-confetti/dist/presets/realistic";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   const [conductor, setConductor] = useState<TConductorInstance>();
@@ -60,6 +61,24 @@ export default function Hero() {
       <p className="text-xl text-gray-600">
         Fullstack web developer from Singapore{" "}
       </p>
+      <div className="flex gap-4 mt-2">
+        <a
+          href="https://github.com/15WattPowerBrick"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-black transition-all"
+        >
+          <FaGithub size={23} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/aung-swan-htat-bb425a1a9/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-blue-600 transition-all"
+        >
+          <FaLinkedin size={23} />
+        </a>
+      </div>
     </div>
   );
 }
