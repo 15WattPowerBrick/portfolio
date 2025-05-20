@@ -65,8 +65,16 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <PlanCard
           type="WEB"
+          title="Code to MDX"
+          description="Effortlessly transform your code snippet into meaningful MDX documentation in seconds."
+          techStack={["Next.js", "ShadCN", "Gemini API", "MDX"]}
+          url="https://mdx.swanhtataung.com"
+          className="bg-pink-100 hover:bg-pink-2000"
+        />
+        <PlanCard
+          type="WEB"
           title="Parsely AI"
-          description="AI-powered resume parsing tool for recruitment agencies."
+          description="AI-powered resume parsing tool. (Demo)"
           techStack={["Next.js", "ShadCN", "Gemini API"]}
           url="https://parsely.swanhtataung.com"
           className="bg-emerald-100 hover:bg-emerald-200"
