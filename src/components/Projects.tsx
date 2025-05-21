@@ -73,7 +73,7 @@ function Projects() {
         />
         <PlanCard
           type="WEB"
-          title="Parsely AI"
+          title="Parsely AI (Demo)"
           description="AI-powered resume parsing tool. (Demo)"
           techStack={["Next.js", "ShadCN", "Gemini API"]}
           url="https://parsely.swanhtataung.com"
@@ -81,7 +81,7 @@ function Projects() {
         />
         <PlanCard
           type="WEB"
-          title="Horizon Focus CRM"
+          title="Horizon Focus CRM (WIP)"
           description="CRM tool built for SMEs in Singapore."
           techStack={["Next.js", "Auth.js", "PostgreSQL", "Zod"]}
           url="https://horizonfocus.cloud"
