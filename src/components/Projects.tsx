@@ -74,7 +74,7 @@ function Projects() {
         <PlanCard
           type="WEB"
           title="Parsely AI (Demo)"
-          description="AI-powered resume parsing tool. (Demo)"
+          description="AI-powered resume parsing tool."
           techStack={["Next.js", "ShadCN", "Gemini API"]}
           url="https://parsely.swanhtataung.com"
           className="bg-emerald-100 hover:bg-emerald-200"
