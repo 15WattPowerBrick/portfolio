@@ -87,14 +87,14 @@ function Projects() {
           url="https://horizonfocus.cloud"
           className="bg-black text-white hover:bg-black/90"
         />
-        <PlanCard
+{/*         <PlanCard
           type="MAC OS"
           title="Zenless"
           description="The small breaks in life go a long way."
           techStack={["Swift", "XCode"]}
           url="https://zenless.swanhtataung.com"
           className="bg-purple-100 hover:bg-purple-200"
-        />
+        /> */}
         <PlanCard
           type="WEB"
           title="Portfolio Template"
