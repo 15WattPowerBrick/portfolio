@@ -63,7 +63,7 @@ export default function Hero() {
       </p>
       <div className="flex gap-4 mt-2">
         <a
-          href="https://github.com/15WattPowerBrick"
+          href="https://github.com/aungsh"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 hover:text-black transition-all"
